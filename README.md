@@ -5,7 +5,7 @@ all the testing functions used throughout this course.
 ### Index
 * [test_cases](#test-cases)
 * [run_tests](#run-tests)
-* [run_tests_logging](#run-tests-logging)
+* [run_tests_diagnostic](#run-tests-diagnostic)
 * [log_reports](#log-reports)
 * [gen_cases_from_exp](#gen-cases-from-exp) 
 * [gen_bool_cases_from_seed](#gen-bool-cases-from-seed) 
@@ -72,7 +72,7 @@ function run_tests(_target, _cases) {
 ## 
 
 ```js
-function run_tests_logging(_target, _cases, _log) {
+function run_tests_diagnostic(_target, _cases) {
   for (let t_case of _cases) {
     let expected = t_case.expected;
 
