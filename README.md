@@ -57,9 +57,10 @@ function run_tests(_target, _cases) {
     };
 
     if (!pass) {
-      console.log(`${t_case.name}: \n`);
-      console.log(`   actual: ${typeof actual},`, actual);
-      console.log(`   expected: ${typeof expected},`, expected);
+      console.groupCollapsed(`%c ${t_case.name}: \n`, 'color:orange');
+      console.log(`%c   actual: ${typeof actual},`, 'color:red', actual);
+      console.log(`%c   expected: ${typeof expected},`, 'color:blue', expected);
+      console.groupEnd();
     };
   };
 };
