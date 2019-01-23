@@ -84,7 +84,9 @@ function run_tests_diagnostic(_target, _cases) {
       const _actual = JSON.stringify(actual);
       const _expected = JSON.stringify(expected);
       pass = _actual === _expected;
-    } else {
+    } else if ( isNaN(expected) ) {
+      pass = isNaN(actual);
+    else {
       pass = actual === expected;
     };
 
